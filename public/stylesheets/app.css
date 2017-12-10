@@ -1,0 +1,13 @@
+.thumbnail{
+    padding:0;
+}
+.img-responsive{
+    width:100% ;
+}
+.delete{
+    display: inline;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}

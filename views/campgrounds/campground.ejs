@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container">
+<header class="jumbotron">
+  <h1>Fursat</h1>
+  <p>View popular places to visit in Delhi</p>
+  <a class="btn btn-lg btn-primary" href="/campground/new">Add new place reviews</a>
+</header>
+<div class="row text-center">
+    <% campground.forEach(function(campground){ %>
+      <div>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+          <img src=" <%= campground.image %> ">
+          <div>
+            <h5> <%= campground.name %> </h5>
+          </div>
+            <div>
+              <a href="/campground/<%=campground.id%>" class="btn btn-primary ">More info</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+<% }); %>
+</div>
+
+</div>
+<% include ../partials/footer %>
