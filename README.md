@@ -1,4 +1,5 @@
-# Fursat-Weekends-in-Delhi
+# Fursat
+### Weekends-in-Delhi
 
 Fursat is a simple website designed with the asynchronous Nodejs framework. 
 It shows places to visit in Delhi for fun during Weekends.
