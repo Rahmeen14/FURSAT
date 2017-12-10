@@ -12,4 +12,4 @@ node app.js
 ```
 Go to ```localhost:3000``` on your favorite browser
 
-Have fun when yopu visit Delhi
+Have fun when you visit Delhi
