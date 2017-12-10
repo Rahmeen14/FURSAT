@@ -9,13 +9,17 @@
 
 
 <h2>These are best caming sites!</h2>
-<div class="row text-center" style="display: flex; fleex-wrap: wrap">
+<div class="row text-center" style="display: flex; flex-wrap: wrap">
 
 <% campgrounds.forEach(function(camp){ %>
 <div class="col-md-4 col-sm-6">
 
-     <div class="thumbnail">
-     <img height="100%" width="100%" src="<%=camp.image %>"> <p class="caption"><em><%= camp.name %></em></p></div>
+     <div class="thumbnail" >
+     <img class="img-responsive left-block" style="height: 502px; overflow: hidden; float: left" src="<%= camp.image %>">
+        <div>
+      <p class="caption"><em><%= camp.name %></em></p></div>
+<a href="/campgrounds/<%= camp._id%>" class="btn btn-primary">More info</a>
+     </div>
 
 
 </div>
