@@ -3,13 +3,9 @@ var router  = express.Router();
 var Campground=require("../models/campground");
 var middleware=require("../middleware");
 var geocoder = require('geocoder');
-//--------------
-//CaAMPGROUND
-//------------------
-
 
 router.get("/campground",function(req,res){
-   //Get from db
+ 
    Campground.find({},function(err,allcamps)
    {
        if(err)
@@ -27,7 +23,7 @@ router.get("/campground/new",middleware.isLoggedIn,function(req,res){
    res.render("campgrounds/new"); 
 });
 router.post("/campground",middleware.isLoggedIn,function(req,res){
-    //accept a campground and add to array
+
     var name=req.body.name1;
     var img=req.body.image;
     var info=req.body.info;
@@ -41,7 +37,7 @@ router.post("/campground",middleware.isLoggedIn,function(req,res){
     var lng = data.results[0].geometry.location.lng;
      var location = data.results[0].formatted_address;
     var newcamp={ name:name, image: img,info:info,author:author,price:price, location: location, lat: lat, lng: lng};
-    //create new item in db
+    
      Campground.create( newcamp ,function(err,camp){
         if(err)
         {
